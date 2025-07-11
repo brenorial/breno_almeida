@@ -7,11 +7,11 @@ const Projetos = () => {
 
   const projects = [
     {
-      title: 'Sistema de Gestão de Estoque',
-      description: 'Sistema completo para controle de estoque desenvolvido em Python com interface web, incluindo cadastro de produtos, controle de entrada e saída, relatórios automatizados e dashboard analítico.',
-      image: '/api/placeholder/400/250',
+      title: 'Dashboard de Controle de RH',
+      description: 'Realizado para a Diretoria de Recursos Humanos, este dashboard apresenta informações detalhadas sobre o número de colaboradores, sua distribuição por áreas, movimentações internas e indicadores relevantes para a gestão de pessoas.',
+      image: 'images/dgp1.png',
       category: 'fullstack',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'HTML/CSS', 'JavaScript'],
+      technologies: ['SQL', 'Power BI', 'PostgreSQL', 'Figma', 'DAX'],
       metrics: ['↑ 40% Eficiência', '↓ 60% Tempo de consulta', '100% Automação'],
       date: '2024',
       githubUrl: 'https://github.com/brenorial',
@@ -19,11 +19,11 @@ const Projetos = () => {
       featured: true
     },
     {
-      title: 'Dashboard de Vendas E-commerce',
-      description: 'Painel interativo para análise de vendas online com métricas em tempo real, gráficos dinâmicos e relatórios personalizados para tomada de decisão estratégica.',
-      image: '/api/placeholder/400/250',
+      title: 'Dashboard de Controle Financeiro',
+      description: 'A Diretoria de Finanças da empresa necessitava de um dashboard para controle do envio de notas fiscais e o processo até o pagamento. Baseado no que eles chamam de "Planilhão", foi desenvolvido o Dash abaixo. Obs.: Foram embaçados os dados sensíveis.',
+      image: 'images/daf_1.png',
       category: 'analytics',
-      technologies: ['Python', 'Power BI', 'SQL Server', 'Excel'],
+      technologies: ['Excel', 'Power BI', 'DAX', 'SQL'],
       metrics: ['↑ 35% ROI', '15 KPIs monitorados', 'Tempo real'],
       date: '2024',
       githubUrl: 'https://github.com/brenorial',
@@ -138,18 +138,16 @@ const Projetos = () => {
             {featuredProjects.slice(0, 2).map((project, index) => (
               <div key={index} className="bg-card/50 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 group border border-border/50">
                 <div className="aspect-video bg-muted/50 relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <TrendingUp className="h-16 w-16 mx-auto mb-4" />
-                      <p className="text-lg font-medium">Projeto Preview</p>
-                    </div>
-                  </div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="object-cover w-full h-full"></img>
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary/90 text-primary-foreground px-3 py-1 rounded-full text-xs font-bold">
                       DESTAQUE
                     </span>
                   </div>
-                </div>
+                  </div>
                 
                 <div className="p-8">
                   <div className="flex items-center justify-between mb-4">
